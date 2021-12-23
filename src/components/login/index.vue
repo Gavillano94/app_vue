@@ -89,7 +89,7 @@ h5{
 
 .padre {
   display: flex;
-  background: #2fa055;
+  background: #B9E09A;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
@@ -106,8 +106,7 @@ h5{
   align-items: center;
   justify-content:center;
   flex-direction: column;
-
-  box-shadow: 1px 1px 20px 1px rgba(92, 92, 92, 0.541);
+  box-shadow: 1px 1px 30px 1px rgba(92, 92, 92, 0.541);
 }
 .cambio button{
   margin: 10px
