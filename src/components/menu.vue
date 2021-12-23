@@ -93,8 +93,27 @@ export default {
       align-items: center;
       justify-content: center;
     }
+    .clock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#033F2F;
+    height: 100px;
+    font-family: "clock-fat-font";
+    font-size: 20px;
+  }
+  .clock h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 40px;
+    padding: 10px;
+    border: 3px solid #033F2F;
+    border-radius: 10px;
+  }
     .boton {
-      background: #98DDCA;
+      background: #0C6A50;
       color: white;
       width: 300px;
       margin: 20px;

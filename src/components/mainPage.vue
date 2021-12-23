@@ -12,13 +12,14 @@
     </div>
     <div class="body">
       <div class="left-menu">
-        <div class="left" v-if="showMenu">
-          <h2 @click="selectTab = 'inicio'">Inicio</h2>
-          <h2 @click="selectTab = 'calendario'">Calendario</h2>
-          <h2>Usuario</h2>
-          <h2>Cerrar sesión</h2>
-        </div>
-        <!-- <main-page-menu v-if="showMenu"></main-page-menu> -->
+        <transition name="fade">
+          <div class="left" v-if="showMenu">
+            <h2 @click="selectTab = 'inicio'">Inicio</h2>
+            <h2 @click="selectTab = 'calendario'">Calendario</h2>
+            <h2>Usuario</h2>
+            <h2>Cerrar sesión</h2>
+          </div>
+        </transition>
       </div>
       <div class="central-menu">
         <template v-if="selectTab == 'inicio'">
@@ -99,31 +100,14 @@ export default {
     display: grid;
     grid-template-columns: 20% 60%;
     min-height: 100vh;
+    background-image: url('./../../public/tree-wallpaper.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   .left-menu{
     display: flex;
     flex-direction: column;
-    height:100%;
     z-index: 2;
-  }
-  .clock{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color:#033F2F;
-    height: 100px;
-    font-family: "clock-fat-font";
-    font-size: 20px;
-  }
-  .clock h2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 40px;
-    padding: 10px;
-    border: 3px solid #033F2F;
-    border-radius: 10px;
   }
   .time{
     font-size: 20px;
@@ -134,7 +118,7 @@ export default {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    background: #98DDCA;
+    background: linear-gradient(#0C6A50,#98DDCA);
     width:300px;
     height: 100%;
     color:bl;
@@ -150,5 +134,12 @@ export default {
   }
   .left h2:active {
     color: black
+  }
+  .fade-enter-active, .fade-leave-active {
+  transition: all .3s
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    width: 0px;
+    color: transparent;
   }
 </style>

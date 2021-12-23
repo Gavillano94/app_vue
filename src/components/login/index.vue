@@ -89,7 +89,7 @@ h5{
 
 .padre {
   display: flex;
-  background: #B9E09A;
+  background: linear-gradient(#0C6A50,#98DDCA);
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;

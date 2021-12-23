@@ -115,9 +115,9 @@
         <li class="next">2</li>
       </ol>
 
-      <div class="horas">
+      <!-- <div class="horas">
         Horas totales al mes = <span id="totalHours"></span>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -154,6 +154,7 @@ li {
   padding: 15px 32px;
   height: 90px;
   border-radius: 10px;
+  box-shadow: #000 1px 3px 10px;
 }
 
 li p {
