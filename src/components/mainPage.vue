@@ -17,7 +17,7 @@
             <h2 @click="selectTab = 'inicio'">Inicio</h2>
             <h2 @click="selectTab = 'calendario'">Calendario</h2>
             <h2>Usuario</h2>
-            <h2>Cerrar sesión</h2>
+            <h2 @click="$emit('backToLogin')">Cerrar sesión</h2>
           </div>
         </transition>
       </div>
@@ -47,28 +47,12 @@ export default {
   },
   data() {
     return {
-      timestamp: "",
       showMenu: false,
       selectTab: "inicio",
     }
   },
   created() {
     setInterval(this.getNow, 1000);
-  },
-  methods: {
-    getNow: function() {
-      const today = new Date();
-      //const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-      //const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-
-      /* ######## Añadir 0 cuando el digito es menor de 10 para que mantenga la forma ########### */
-      const time = (today.getHours() < 10 ? "0" + today.getHours() + ":": today.getHours() + ":") + (today.getMinutes() < 10 ?  "0" + today.getMinutes() + ":" : today.getMinutes() + ":") + (today.getSeconds() < 10 ? "0" + today.getSeconds()  : today.getSeconds());
-      //const dateTime = date +' '+ time;
-      this.timestamp = time;
-    },
-    console: function() {
-      console.log('probando h2')
-    }
   }
 }
 

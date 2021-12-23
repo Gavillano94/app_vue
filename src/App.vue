@@ -4,7 +4,7 @@
       <login v-on:changeLogin="showLogin = true"/>
     </div>
     <div class="main" v-if="showLogin == true">
-      <mainPage/>
+      <mainPage v-on:backToLogin="showLogin = false"/>
     </div>
   </div>
 </template>
