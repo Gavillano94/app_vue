@@ -100,7 +100,7 @@ export default {
     display: grid;
     grid-template-columns: 20% 60%;
     min-height: 100vh;
-    background-image: url('./../../public/tree-wallpaper.webp');
+    background-image: url('./../../public/tree-wallpaper-opacity.png');
     background-size: cover;
     background-repeat: no-repeat;
   }
