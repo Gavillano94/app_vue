@@ -23,8 +23,8 @@
           <h5>Contraseña:</h5>
           <input type="password" placeholder="contraseña">
           <p><button @click="$emit('changeLogin')"> Iniciar Sesión</button></p>
-          <p>¿Aun no tienes cuenta? <a href="./main.vue">Registrarse</a></p>
-          <p>¿Has olvidado la contraseña? <a href="./main.vue">Recuperar</a></p>
+          <p>¿Aun no tienes cuenta? <a href="">Registrarse</a></p>
+          <p>¿Has olvidado la contraseña? <a href="">Recuperar</a></p>
             <div class="cambio">
               <button @click="change = true">Acceso empleado</button>
             </div>
